@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --color: #9EB23B;
+    --font-size: 20px;
+    --font-weight: bold; 
+    --facebook: <i class="fa-brands fa-facebook"></i>;
+    --twitter: <i class="fa-brands fa-twitter"></i>;
+    --linkedin: <i class="fa-brands fa-linkedin"></i>;
+    --p: <i class="fa-brands fa-p"></i>;
+    --user: <i class="fa-solid fa-user"></i>;
+    --mail: <i class="fa-solid fa-envelope"></i>;
+    --phone: <i class="fa-solid fa-phone"></i>;
+    --heart: <i class="fa-solid fa-heart"></i>;
+    --shop: <i class="fa-solid fa-bag-shopping"></i>;
+}
+
+.bg-color-head {
+    background-color: rgba(206, 203, 203, 0.3);
+    width: 100%;
+    position: absolute;
+    height: 60px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.first-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.mail-first-head {
+    display: flex;
+    gap: 3rem;
+}
+
+.mail-first-head .mail-part {
+    position: relative;
+}
+
+.mail-first-head .mail-part i{
+    margin-right: 0.5rem;
+}
+
+
+.mail-first-head .mail-part::after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    height: 20px;
+    background: gray;
+    opacity: 0.3;
+    right: -25px;
+}
+
+.icons-first-head {
+    display: flex;
+    gap: 2rem;
+}
+
+.icons-first-head .icons {
+    display: flex;
+    gap: 2rem;
+}
+
+.icons-first-head .icons i {
+    cursor: pointer;
+}
+
+.icons-first-head .language {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.icons-first-head .language::before {
+    position: absolute;
+    content: '';
+    background: gray;
+    opacity: 0.3;
+    width: 2px;
+    height: 20px;
+    right: -25px;
+}
+
+.icons-first-head .language::after {
+    position: absolute;
+    content: '';
+    background: gray;
+    opacity: 0.3;
+    width: 2px;
+    height: 20px;
+    left: -25px;
+}
+
+.icons-first-head .language span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.icons-first-head .language ul {
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    padding: 1.5rem 1.5rem;
+    left: -10px;
+    border-radius: 10px;
+}
+
+.icons-first-head .language ul li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.icons-first-head .language ul li + li {
+    margin-top: 0.5rem;
+}
+
+.icons-first-head .language ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.icons-first-head .language:hover ul {
+    display: block;
+}
+
+.icons-first-head .login-user {
+    display: flex;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.second-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.second-head .logo {
+    font-size: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: black;
+}
+
+.second-head nav {
+    display: flex;
+    gap: 3rem;
+}
+
+.second-head nav .main-ul {
+    list-style-type: none;
+    display: flex;
+    gap: 4rem;
+    font-weight: bold;
+}
+
+.second-head nav .main-ul li a:hover {
+    color: var(--color);
+    transition: all 0.3s;
+}
+
+.second-head nav .main-ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.pages-ul {
+    position: relative;
+}
+
+.dropdown-pages {
+    position: absolute;
+    display: none;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 1;
+    width: 10rem;
+    text-transform: capitalize;
+    font-weight: lighter;
+}
+
+.pages-ul:hover .dropdown-pages {
+    display: block;
+}
+
+.second-head nav ul .dropdown-pages li {
+    margin: 20px 20px;
+    list-style-type: none;
+}
+
+.dropdown-pages li a:hover {
+    color: var(--color);
+    transition: all 0.3s;
+}
+
+.second-head nav ul .dropdown-pages li a {
+    color: #fff;
+}
+
+.second-head div {
+    display: flex;
+    gap: 2rem;
+}
+
+.first-sec {
+    display: flex;
+    width: 100%;
+    height: 500px;
+}
+.first-sec .departments{
+    width: 31%;
+    height: 7%;
+    position: relative;
+}
+
+.first-sec .departments .departments-btn button {
+    border: none;
+    outline: none;
+    padding: 10px 0;
+    background-color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.first-sec .departments .departments-btn button i {
+    font-size: 20px;
+}
+
+.first-sec .departments ul {
+    position: absolute;
+    display: none;
+    list-style-type: none;
+    text-transform: capitalize;
+    font-size: 18px;
+    width: 100%;
+    /* because the parent`s height is 7% from 600px so, 1120% = 470.4px */ 
+    height: 1380%;
+    border: 1px solid rgb(202, 196, 196);
+    padding-top: 20px;
+    text-align: center;
+}
+
+.first-sec .departments ul li a:hover {
+    color: var(--color);
+    transition: all 0.3s;
+}
+
+.first-sec .departments:hover ul {
+    display: block;
+}
+
+.first-sec .departments ul a {
+    color: black;
+    text-decoration: none;
+}
+
+.first-sec .departments ul li + li {
+    margin-top: 20px;
+}
+
+.categories {
+    margin-left: 50px;
+    width: 100%;
+    position: relative;
+}
+
+.categories .categories-search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.categories .categories-search .search {
+    border: 1px solid rgba(206, 203, 203, 0.3);
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.categories .categories-search .search .all {
+    font-size: 16px;
+    padding: 10px 20px;
+    text-transform: capitalize;
+    font-weight: bold;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    gap: 1rem;
+}
+
+.categories .categories-search .search input {
+    border: none;
+    outline: none;
+    font-size: 15px;
+    width: 50%;
+    padding-left: 30px;
+}
+
+.categories .categories-search .search .all::after {
+    position: absolute;
+    content: '';
+    height: 20px;
+    width: 2px;
+    background-color: gray;
+    opacity: 0.3;
+    left: 12.5rem;
+}
+
+.categories .categories-search .search .search-btn {
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: var(--color);
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    text-align: center;
+}
+
+.categories .categories-search .phone {
+    display: flex;
+    gap: 1rem;
+}
+
+.categories .categories-search .fa-square-phone {
+    color: var(--color);
+    font-size: 40px;
+}
+
+.categories .categories-search .phone h3 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.categories-shop {
+    background-image: url('../img/1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.categories-shop .info-shop {
+    margin-top: 10rem;
+    margin-left: 5rem;
+}
+
+.categories-shop .info-shop p {
+    color: var(--color);
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.categories-shop .info-shop h1 {
+    width: 300px;
+    font-weight: bold;
+    font-size: 40px;
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+.categories-shop .info-shop h3 {
+    text-transform: capitalize;
+    width: 200;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 30px
+}
+
+.categories-shop .info-shop button {
+    padding: 10px 30px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: var(--color);
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.categories-shop .info-shop button a {
+    color: #fff;
+    text-decoration: none;
+}
+
